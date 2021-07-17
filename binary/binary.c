@@ -15,8 +15,8 @@ int main(void)
     
 	scanf("%d", &decimal);
 	int tens = 1;
-    	placeholder = forming(decimal, &tens);
+    placeholder = forming(decimal, &tens);
 	
-	binary = reverse(placeholder);
-    	printf("%d\n", binary);
+	binary = reverse(placeholder, tens);
+    printf("%d\n", binary);
 }
