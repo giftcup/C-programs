@@ -4,10 +4,12 @@
 /* Version 17. 07. 21 */
 /* by ~giftcup */
 
-int binary = 0;
+int reverse(int placeholder, int tens){
+	int binary = 0;
 	while(tens != 0) {
-        	binary += (placeholder % 10) * tens;
-        	placeholder /= 10;
-        	tens = tens / 10;
-    	}
-return binary;
+		binary += (placeholder % 10) * tens;
+		placeholder /= 10;
+		tens = tens / 10;
+	}
+	return binary;
+}
