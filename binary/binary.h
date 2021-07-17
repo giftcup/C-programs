@@ -1,2 +1,2 @@
 int forming(int, int*);
-int reverse(int);
+int reverse(int, int);
