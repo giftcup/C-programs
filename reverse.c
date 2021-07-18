@@ -15,7 +15,7 @@ int main()
         *(temp + j) = *(arr + j);
     }
     
-    // Write the logic to reverse the array.
+    // logic to reverse the array.
  
     for(int i = 0; i < num; i++){
         *(arr + i) = *(temp + num - i - 1);
