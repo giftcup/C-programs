@@ -15,7 +15,8 @@ main(void){
 		}
 	}
 
-
+	// Doesn't perform the complete gaussian elimination for the last row
+	// review the algorithm
 	for (i = 0; i < rows; i++){
 		for (j = 0; j < cols; j++){
 			if (i == 0){

@@ -2,7 +2,7 @@
 CC	=	gcc
 #defining compiler flags
 CFLAGS =	-std=c11 -Wall -fmax-errors=5 -Wextra
-#defining library paths
+#defining library paths (no libraries yet)
 LFLAGS	=
 #define libraries
 LIBS	=
@@ -10,7 +10,7 @@ LIBS	=
 OBJFILES = binary.o forming.o reverse.object
 # name of the executable program
 MAIN	=	binary
-# crea
+# creating the executable (generic code)
 all	:	$(MAIN)
 $(MAIN)	: $(OBJFILES)
 	$(CC) $(CFLAGS) -c -o $@ &<
