@@ -15,7 +15,7 @@ int main(void){
     printf("Enter any number: ");
     scanf("%d", &number);
 
-    for(i = 0; i < number/2; i++) {
+    for(i = 1; i < number/2; i++) {
         if(number%i == 0){
             prime = false;
             break;
