@@ -11,8 +11,10 @@ OBJFILES = binary.o forming.o reverse.o
 # name of the executable program
 MAIN	=	binary
 # creating the executable (generic code)
-all	:	$(MAIN)
+all	: $(MAIN)
 $(MAIN)	: $(OBJFILES)
-	$(CC) $(CFLAGS) -c -o $@ &<
+	$(CC) $(CFLAGS) -o $(MAIN) $(OBJFILES)
+%.o	: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<	
 clean:
 	rm -f $(OBJFILES) $(MAIN)
