@@ -20,7 +20,7 @@ int main(void)
 
     for (int i = 0; i < number_of_payments; i++)
     {
-        amount = amount - payment + (amount * interest / 120);
+        amount = amount - payment + (amount * interest / 100 / 12);
         printf("Balance remaining after %d payment: %.2f\n", i + 1, amount);
     }
 
