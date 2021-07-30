@@ -45,7 +45,7 @@ int main(void)
     case 12: printf("December"); break;
     }
 
-    printf(", 20%d\n", year);
+    printf(", 20%.2d\n", year);
 
     return 0;
 }
