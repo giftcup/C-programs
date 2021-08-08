@@ -4,10 +4,8 @@
 ** version: 07.08.2021
 */
 
-#include <math.h>
 #include <stdio.h>
-
-int power(int, int);
+#include <math.h>
 
 int main (void)
 {
@@ -15,24 +13,18 @@ int main (void)
 	printf ("Enter a number: ");
 	scanf ("%d", &number);
 	
-	int length_of_num = 0;
-	int temp = number;
-	while (temp > 0)
-	{
-		temp = temp / 10;
-		length_of_num++;
-	}
+	// Getting the length of the number.
+	int length_of_num = (number < 0) ? 0 : (log10(number)) + 1;
 	
-	temp = number;
+	// Raising each digit of the number to the length_of_num
 	int sum = 0;
-	while (number > 0)
+	for (int i = number; i > 0; i /= 10)
 	{	
-		int index = number % 10;
-		sum += power (index, length_of_num);
-		number = number / 10;
+		int index = i % 10;
+		index = pow (index, length_of_num);
+		sum += index;
 	}
 	
-	number = temp;
 	if (number == sum)
 	{
 		printf("Number is an armstrong number\n");
@@ -43,18 +35,4 @@ int main (void)
 	}
 	
 	return 0;
-}
-
-int power(int base, int pow)
-{
-	int num = base;
-	printf("%d\n", num);
-	for (int i = 1; i < pow; i++)
-	{
-		num = num * base;
-		printf("%d ",num);
-	} printf("\n");
-	printf("%d ", num);
-	printf("\n");
-	return num;
 }
