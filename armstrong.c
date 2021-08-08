@@ -7,7 +7,7 @@
 #include <math.h>
 #include <stdio.h>
 
-double pow(double x, double y);
+int power(int, int);
 
 int main (void)
 {
@@ -24,11 +24,11 @@ int main (void)
 	}
 	
 	temp = number;
-	float sum = 0;
+	int sum = 0;
 	while (number > 0)
 	{	
 		int index = number % 10;
-		sum += pow (index, length_of_num);
+		sum += power (index, length_of_num);
 		number = number / 10;
 	}
 	
@@ -43,4 +43,18 @@ int main (void)
 	}
 	
 	return 0;
+}
+
+int power(int base, int pow)
+{
+	int num = base;
+	printf("%d\n", num);
+	for (int i = 1; i < pow; i++)
+	{
+		num = num * base;
+		printf("%d ",num);
+	} printf("\n");
+	printf("%d ", num);
+	printf("\n");
+	return num;
 }
