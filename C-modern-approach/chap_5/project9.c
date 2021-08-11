@@ -95,9 +95,13 @@ int main(void)
     {
         printf("%.2d/%.2d/%.2d is earlier than %.2d/%.2d/%.2d\n\n", month1, day1, year1, month2, day2, year2);
     }
-    else
+    else if(date2 == true)
     {
         printf("%.2d/%.2d/%.2d is earlier than %.2d/%.2d/%.2d\n\n", month2, day2, year2, month1, day1, year1);
+    }
+    else 
+    {
+        printf("Both dates are thesame\n");
     }
 
     return 0;
