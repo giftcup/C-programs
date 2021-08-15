@@ -1,13 +1,16 @@
+/* A calculator that performs simple arithmetic operations on two numbers*/
+
 #include <stdio.h>
 
 int main(void) {
 	char operator;
 	double num1, num2, result;
 
-	printf("Choose one of the following operations to be performed on the numbers + - * / : \n");
-	scanf("%c", &operator);
 	printf("Enter two numbers you'll like to Add, Subtract, Multiply or Divide: \n");
 	scanf("%lf %lf", &num1, &num2);
+
+	printf("Choose one of the following operations to be performed on the numbers + - * / : \n");
+	scanf(" %c", &operator);
 
 	switch(operator) {
 		case '+':
