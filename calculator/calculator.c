@@ -20,13 +20,17 @@ int main(void) {
 			result = num1 * num2;
 			break;
 		case '/':
-			result = num1 / num2;
+			if(num2 != 0)
+				result = num1 / num2;
+			else
+				printf("Division by zero is invalid\n");
+				return 0;
 			break;
 		default:
 			printf("You entered an invalid operation!\n");
-			return 1;
+			return 0;
 	}
-	printf("The result of %.2lf %c %.2lf is %.2lf\n", num1, operator, num2, result);
+	printf("%.2lf %c %.2lf = %.2lf\n", num1, operator, num2, result);
 	return 0;
 	
 }
