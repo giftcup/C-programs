@@ -1,4 +1,4 @@
-/* A calculator that performs simple arithmetic operations on two numbers*/
+/* A calculator that performs simple arithmetic operations on two numbers */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,13 +27,13 @@ int main(void) {
 }
 
  /*************************************************
- * hello: Basic greeting to the user.             *
- *************************************************/
+  * hello: Basic greeting to the user.            *
+  ************************************************/
 void hello(void)
 {
 	printf("- - - - - - - - - - - - - - - "
 	       "- - - - - - - - - - - - -\n");
-	printf("\n\nHello, I'm here to make your life better :)\n\n");
+	printf("\nHello, I'm here to make your life easier :)\n\n");
 }
 
 
@@ -108,6 +108,6 @@ void result(int op, double x, double y)
 	}
 		printf("Result = %.2lf\n", result);
 		printf("- - - - - - - - - - - - - - - - -" 
-		        "- - - - - - - - - - - - - - \n\n");
+		        " - - - - - - - - - - - -\n\n");
 
 }
