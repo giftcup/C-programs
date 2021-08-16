@@ -26,12 +26,13 @@ int main(void) {
 	}
 }
 
-/****************************************************
+ /*************************************************
  * hello: Basic greeting to the user.             *
- ***************************************************/
+ *************************************************/
 void hello(void)
 {
-	printf("- - - - - - - - - - - - - - - - - - - - - - - - - - - -\n");
+	printf("- - - - - - - - - - - - - - - "
+	       "- - - - - - - - - - - - -\n");
 	printf("\n\nHello, I'm here to make your life better :)\n\n");
 }
 
@@ -78,8 +79,8 @@ void get_numbers(double* x, double* y)
 }
 
 /***************************************************
- * Performs the calculation and prints out the     *
- * result                                          *
+ * result: Performs the calculation and prints 	   *
+ * out the result                                  *
  **************************************************/
 void result(int op, double x, double y)
 {
@@ -106,6 +107,7 @@ void result(int op, double x, double y)
 			return;
 	}
 		printf("Result = %.2lf\n", result);
-		printf("- - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\n");
+		printf("- - - - - - - - - - - - - - - - -" 
+		        "- - - - - - - - - - - - - - \n\n");
 
 }
