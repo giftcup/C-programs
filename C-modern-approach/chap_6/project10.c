@@ -27,10 +27,14 @@ int main(void)
         scanf("%d/%d/%d", &mon, &day, &yr);
 
         // Exits the program when user enters 0/0/0
-        if (mon == 0 && day == 0 && yr == 0) break;
+        if (mon == 0 && day == 0 && yr == 0) 
+            break;
+        
         read = day + (mon * DAYS_IN_MONTH) + (yr * DAYS_IN_YEAR);
+        
         //Checks if the date read is earlier than the previous.
-        if (read < min) min = read;
+        if (read < min) 
+            min = read;
     }
     
     yr = min / DAYS_IN_YEAR;
