@@ -42,11 +42,13 @@ void hello(void)
  **************************************************/
 void usage(void)
 {
+	printf("\033[1;30m\033[47m\n\n");
 	printf("1. Addition\n"
 			"2. Subtraction\n"
 			"3. Multiplication\n"
 			"4. Division\n"
 			"5. Exit\n");
+	printf("\033[0m");
 	return;
 }
 
@@ -56,7 +58,8 @@ void usage(void)
  **************************************************/
 void get_operation(int* operation)
 {
-	printf("Enter your choice(1-5): ");
+	printf("\033[1;37m\033[44m\n\n");
+	printf("\nEnter your choice(1-5): ");
 	scanf("%d", operation);
 }
 
@@ -67,6 +70,7 @@ void get_operation(int* operation)
 void exit_program(int operation)
 {
 	if(operation == 5)
+		printf("\n");
 		exit(EXIT_SUCCESS);
 }
 /***************************************************
@@ -98,9 +102,10 @@ void result(int op, double x, double y)
 		case 4:
 			if(y != 0)
 				result = x / y;
-			else
+			else{
 				printf("Division by zero is invalid\n");
 				return;
+			}
 			break;
 		default:
 			printf("You entered an invalid operation!\n");
@@ -108,6 +113,6 @@ void result(int op, double x, double y)
 	}
 		printf("Result = %.2lf\n", result);
 		printf("- - - - - - - - - - - - - - - - -" 
-		        " - - - - - - - - - - - -\n\n");
+		        " - - - - - - - - - - - -\n");
 
 }
