@@ -29,11 +29,12 @@ int main(void)
 
     mace[i][j] = 'A';
     for (int k = 1; k < 26; k++)
-    {
+    {   
+        int count = 0;
+        random = rand() % 4;
         present = false;
         while (!present)
         {
-            random = rand() % 4;
             printf("%d ", random);
             if (random == up)
             {   
@@ -71,8 +72,14 @@ int main(void)
                     j += 1;
                 }
             }
+            random = (random + 1) % 4;
+            count++;
+            if (count == 4) 
+                break;
         }
         printf("\n");
+        if (count == 4)
+            break;
     }
 
     for (int i = 0; i < SIZE; i++)
