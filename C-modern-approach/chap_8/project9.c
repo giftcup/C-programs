@@ -35,7 +35,6 @@ int main(void)
         present = false;
         while (!present)
         {
-            printf("%d ", random);
             if (random == up)
             {   
                 if (i - 1 >= 0 && i - 1 < 10 && mace[i-1][j] == '.')
@@ -77,8 +76,7 @@ int main(void)
             if (count == 4) 
                 break;
         }
-        printf("\n");
-        if (count == 4)
+        if (count == 4 && present == false)
             break;
     }
 
