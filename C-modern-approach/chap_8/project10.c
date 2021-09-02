@@ -1,6 +1,7 @@
 /* Allocates arrival and departure time for a travller */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #define SIZE 8
 
@@ -10,7 +11,8 @@ int main(void)
     int arrival[SIZE] = {616, 712, 811, 900, 968, 1075, 1280, 1438};
 
     int hour, minute;
-    int min, i, mindex;
+    int min, i;
+    int flightnum = 0;
     
     
     printf("Enter 24-hour time (hh:mm): ");
@@ -18,20 +20,19 @@ int main(void)
 
     minute += (hour * 60);
 
-    min = (int) fabs(minute - departure[0]);
+    min = abs(minute - departure[0]);
     
-    mindex = 0;
     for (i = 1; i < SIZE; i++)
     {
-        if (minute < departure[i])
+        int temp = abs(minute - departure[i]);
+        if (temp < min)
         {
-            min = departure[i];
-            mindex = i;
-        }
+            min = temp;
+            flightnum++;
+        } else break;
     }
-    i--;
 
-    printf("Closest departure time is %.2d:%.2d %s, arriving at %.2d:%.2d %s\n", min / 60, min % 60, min >= 720 ? "pm" : "am", arrival[mindex] / 60, arrival[mindex] % 60, arrival[mindex] >= 720 ? "pm" : "am");
+    printf("Closest departure time is %.2d:%.2d, arriving at %.2d:%.2d\n", departure[flightnum] / 60, departure[flightnum] % 60, arrival[flightnum] / 60, arrival[flightnum] % 60);
 
     return 0;
 }
