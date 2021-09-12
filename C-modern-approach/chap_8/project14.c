@@ -26,25 +26,17 @@ int main(void)
 
     for (int j = i; j >= 0; j--)
     {
-        //putchar(sentence[j]);
-        if (sentence[j] != ' ' && j != 0)
-        {
-            //putchar(sentence[j]);
-            continue;
-        }
-        else if (j == 0)
+        if (j == 0)
         {
             for (int k = j; k <= i && sentence[k] != ' '; k++)
             {   
-                //printf("%d", k);
                 printf("%c", sentence[k]);
             }
         }
-        else
+        else if (sentence[j] == ' ' && j != 0)
         {
             for (int k = j + 1; k <= i && sentence[k] != ' '; k++)
             {   
-                //printf("%d", k);
                 printf("%c", sentence[k]);
             }
             printf("%c", ' ');
