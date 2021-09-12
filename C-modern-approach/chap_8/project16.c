@@ -23,7 +23,7 @@ int main(void)
 
     printf("Enter second word: ");
     i = 0;
-    while ((ch = getchar()) != '\n')
+    while ((ch = tolower(getchar())) != '\n')
     {
         tracker[ch - 'a'] -= 1;
     }
